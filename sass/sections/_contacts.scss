@@ -1,0 +1,143 @@
+.contacts {
+   &__title {
+      margin-bottom: 32px;
+
+      /* Tablet Small*/
+      @media (max-width: 899px) {
+         margin-bottom: 28px;
+      }
+
+      /* Mobile*/
+      @media (max-width: 599px) {
+         padding: 0 16px;
+         margin-bottom: 24px;
+      }
+   }
+
+   &__content {
+      padding: 27px 28px;
+      border-radius: 6px;
+      background-color: $white-color;
+
+      /* Mobile*/
+      @media (max-width: 599px) {
+         padding: 24px 16px;
+      }
+   }
+
+   &__top {
+      display: flex;
+      column-gap: 48px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+      row-gap: 24px;
+   }
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+   }
+
+   &__subtitle {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.3;
+      letter-spacing: 0.1px;
+      color: $dark-pink;
+   }
+
+   &__item {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+      color: #0e0e0e;
+   }
+
+   &__socials {
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+      margin-bottom: 32px;
+
+      &--mob {
+         display: none;
+         margin-bottom: 0;
+         margin-top: 8px;
+         margin-bottom: 8px;
+      }
+
+      /* Mobile*/
+      @media (max-width: 599px) {
+         &--desc {
+            display: none;
+         }
+         &--mob {
+            display: flex;
+         }
+      }
+   }
+
+   &__socials-row {
+      display: flex;
+      column-gap: 24px;
+      flex-wrap: wrap;
+      row-gap: 24px;
+      /* Mobile*/
+      @media (max-width: 599px) {
+         column-gap: 48px;
+      }
+   }
+
+   &__social {
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+   }
+
+   &__social-icon {
+      width: 30px;
+      height: 30px;
+   }
+
+   &__social-name {
+      font-size: 16px;
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+   }
+
+   &__map {
+      border-radius: 6px;
+      overflow: hidden;
+      background-color: $light-gray;
+
+      iframe {
+         width: 100%;
+         height: 425px;
+         position: relative;
+      }
+
+      /* Tablet Small*/
+      @media (max-width: 899px) {
+         iframe {
+            height: 400px;
+         }
+      }
+
+      /* Mobile*/
+      @media (max-width: 599px) {
+         iframe {
+            height: 358px;
+         }
+      }
+   }
+
+   /* Mobile*/
+   @media (max-width: 599px) {
+      .container {
+         width: 100%;
+         padding: 0;
+      }
+   }
+}

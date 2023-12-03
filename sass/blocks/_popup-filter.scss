@@ -1,0 +1,45 @@
+.popup-filter {
+   &.active {
+      left: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 1;
+      z-index: 6;
+      transition: opacity 0.2s ease-out;
+   }
+
+   .filter__inner {
+      padding: 0;
+   }
+
+   .popup__title {
+      margin-bottom: 32px;
+   }
+
+   .slider {
+      .progress {
+         left: 20%;
+         right: 20%;
+
+         /* Mobile*/
+         @media (max-width: 599px) {
+            left: 35%;
+            right: 35%;
+         }
+      }
+   }
+
+   .filter__list {
+      margin-bottom: 32px;
+      row-gap: 24px;
+   }
+
+   .popup-filter__btns {
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+      & > * {
+         width: 100%;
+      }
+   }
+}

@@ -1,0 +1,46 @@
+.checkbox {
+   display: flex;
+   align-items: start;
+   &__real {
+      position: absolute;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      z-index: -1;
+      appearance: none;
+
+      &:checked ~ .checkbox__custom {
+         background-color: $dark-pink;
+      }
+      &:checked ~ .checkbox__custom:before {
+         transform: translate(-50%, -50%) scale(1);
+      }
+   }
+
+   &__custom {
+      flex-shrink: 0;
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      width: 16px;
+      height: 16px;
+      background-color: $white-color;
+      border-radius: 2px;
+      border: 1px solid $dark-pink;
+
+      &::before {
+         content: "";
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%, -50%) scale(0);
+         background-image: url("../img/icons/form/check.svg");
+         background-repeat: no-repeat;
+         background-position: center;
+         width: 10px;
+         height: 8px;
+
+         transition: transform 0.2s ease-in;
+      }
+   }
+}

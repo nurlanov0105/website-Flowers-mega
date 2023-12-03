@@ -1,0 +1,131 @@
+.help {
+   &__title {
+      margin-bottom: 32px;
+   }
+
+   &__content {
+      display: flex;
+      flex-direction: column;
+      row-gap: 32px;
+   }
+
+   &__container {
+   }
+
+   &__subttitle {
+      margin-bottom: 26px;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+
+      /* Mobile*/
+      @media (max-width: 599px) {
+         font-size: 20px;
+         line-height: 1.3;
+         letter-spacing: 0.1px;
+      }
+   }
+
+   &__row {
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+   }
+}
+
+.help-box {
+   display: flex;
+   flex-direction: column;
+   padding: 17px 28px;
+
+   border-radius: 10px;
+   background-color: $white-color;
+
+   &.active {
+      .help-box__arrow {
+         transform: rotate(-180deg);
+      }
+
+      .help-box__descr {
+         display: block;
+      }
+   }
+
+   &__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: 12px;
+      cursor: pointer;
+   }
+
+   &__title {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: 0.1px;
+   }
+
+   &__arrow {
+      flex-shrink: 0;
+      @include transition;
+      svg {
+         width: 34px;
+         height: 34px;
+         fill: none;
+
+         path {
+            fill: $green-color;
+         }
+
+         /* Mobile*/
+         @media (max-width: 599px) {
+            width: 28px;
+            height: 28px;
+         }
+      }
+
+      &--desc {
+         /* Mobile*/
+         @media (max-width: 599px) {
+            display: none;
+         }
+      }
+
+      &--mob {
+         display: none;
+
+         /* Mobile*/
+         @media (max-width: 599px) {
+            display: inline-block;
+         }
+      }
+   }
+
+   &__descr {
+      display: none;
+      margin-top: 20px;
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+
+      p:last-child {
+         margin-top: 20px;
+      }
+   }
+
+   /* Mobile*/
+   @media (max-width: 599px) {
+      padding: 16px;
+
+      &__title {
+         font-size: 16px;
+         letter-spacing: 0.2px;
+      }
+
+      &__descr {
+         font-size: 14px;
+         line-height: 1.42;
+      }
+   }
+}

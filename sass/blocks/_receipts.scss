@@ -1,0 +1,53 @@
+.receipts {
+   display: flex;
+   column-gap: 8px;
+   row-gap: 8px;
+   flex-wrap: wrap;
+   &__item {
+      display: inline-flex;
+      align-items: center;
+      column-gap: 4px;
+      flex-shrink: 0;
+      padding: 5px 4px;
+
+      background-color: $gray-pink;
+      border-radius: 6px;
+
+      font-size: 12px;
+      line-height: 1.16;
+
+      & > * {
+         flex-shrink: 0;
+      }
+
+      cursor: pointer;
+      transition: background-color 0.2s ease-out;
+
+      &:hover,
+      &:focus {
+         background-color: $dark-pink;
+         color: $white-color;
+
+         .receipts__btn {
+            svg {
+               path {
+                  stroke: $white-color;
+               }
+            }
+         }
+      }
+   }
+
+   &__btn {
+      svg {
+         width: 18px;
+         height: 18px;
+         fill: none;
+
+         path {
+            stroke: $dark-gray;
+            @include transition;
+         }
+      }
+   }
+}

@@ -1,0 +1,44 @@
+.popup-2-succes {
+   &.active {
+      top: 36%;
+   }
+   .popup-2__content {
+      padding: 32px;
+   }
+   .popup-2__title {
+      margin-bottom: 24px;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+   }
+   &__subtitle {
+      margin-bottom: 32px;
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+
+      /* Tablet Small*/
+      @media (max-width: 899px) {
+         font-size: 14px;
+         line-height: 1.42;
+      }
+   }
+
+   &__btn {
+   }
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      .popup-2__content {
+         width: 358px;
+         padding: 32px 16px;
+      }
+   }
+
+   /* Mobile*/
+   @media (max-width: 359px) {
+      .popup-2__content {
+         width: 90vw;
+      }
+   }
+}

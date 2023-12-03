@@ -1,0 +1,39 @@
+.popular-category {
+   padding-bottom: 48px;
+   &__title {
+      margin-bottom: 24px;
+   }
+
+   &__slider {
+      padding: 24px;
+      background-color: $white-color;
+      border-radius: 6px;
+      overflow: hidden;
+   }
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      padding-bottom: 42px;
+      & > .container {
+         max-width: unset;
+         width: 100%;
+         margin: 0;
+      }
+   }
+
+   /* Mobile*/
+   @media (max-width: 599px) {
+      padding-bottom: 32px;
+      &__title {
+         margin-bottom: 16px;
+      }
+      &__slider {
+         background-color: transparent;
+         padding: 0;
+      }
+
+      & > .container {
+         padding-right: 0;
+      }
+   }
+}

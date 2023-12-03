@@ -1,0 +1,39 @@
+.page-nav {
+   padding: 24px 0;
+   &__list {
+      display: flex;
+      align-items: center;
+      column-gap: 16px;
+   }
+
+   &__item {
+      padding-right: 21px;
+      font-size: 14px;
+      line-height: 1.2;
+      position: relative;
+      color: $dark-gray;
+
+      &:not(:last-child)::after {
+         content: "/";
+         position: absolute;
+         top: 50%;
+         right: 0;
+         transform: translateY(-50%);
+
+         font-size: 14px;
+         font-weight: 400;
+         line-height: 1.2;
+         color: $dark-gray;
+      }
+      @include transition;
+
+      &:hover,
+      &:focus,
+      &:active {
+         color: $black-color;
+      }
+   }
+
+   &__link {
+   }
+}

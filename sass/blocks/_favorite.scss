@@ -1,0 +1,15 @@
+.favorite {
+   svg {
+      fill: none;
+      path {
+         stroke: $accent-color;
+      }
+   }
+   &.active {
+      path {
+         fill: $dark-pink;
+         stroke: $dark-pink;
+      }
+   }
+   cursor: pointer;
+}

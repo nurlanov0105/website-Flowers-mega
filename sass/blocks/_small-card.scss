@@ -1,0 +1,50 @@
+.small-card {
+   max-width: 124px;
+   width: 100% !important;
+   &__img {
+      margin-bottom: 4px;
+      padding: 8px;
+      background-color: $light-pink;
+      border-radius: 6px;
+      overflow: hidden;
+
+      img {
+         width: 108px;
+         height: 108px;
+      }
+   }
+
+   &__title {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      color: $black-color;
+   }
+
+   /* Tablet Big */
+   @media (max-width: 1231px) {
+      max-width: 118px;
+   }
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      &__title {
+         font-size: 16px;
+      }
+   }
+
+   /* Mobile*/
+   @media (max-width: 599px) {
+      max-width: 90px;
+      &__img {
+         img {
+            width: 74px;
+            height: 74px;
+         }
+      }
+
+      &__title {
+         font-size: 14px;
+      }
+   }
+}

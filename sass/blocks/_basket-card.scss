@@ -1,0 +1,158 @@
+.basket-card {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 24px 8px;
+   border-bottom: 1px solid $green-color;
+
+   &__box {
+      display: flex;
+      align-items: center;
+      column-gap: 32px;
+   }
+
+   &__img {
+      width: 104px;
+      height: 104px;
+
+      img {
+         width: 100%;
+      }
+   }
+
+   &__row {
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+   }
+
+   &__title {
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+      min-height: 40px;
+   }
+
+   &__descr {
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+      color: $dark-gray;
+   }
+
+   &__counter {
+      .counter__input {
+         border-radius: 6px;
+         border: 1px solid rgba(139, 139, 139, 0.4);
+         background-color: $white-color;
+
+         /* Mobile*/
+         @media (max-width: 599px) {
+            height: 32px;
+         }
+      }
+
+      svg {
+         path {
+            fill: $black-color;
+         }
+      }
+
+      .counter__minus {
+         left: unset;
+         right: 8px;
+      }
+
+      .counter__plus {
+         right: unset;
+         left: 8px;
+      }
+   }
+
+   &__price {
+      display: inline-block;
+      min-width: 106px;
+      text-align: right;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+
+      /* Tablet Small*/
+      @media (max-width: 899px) {
+         text-align: left;
+      }
+
+      /* Mobile*/
+      @media (max-width: 599px) {
+         font-size: 20px;
+         line-height: 1.3;
+         letter-spacing: 0.1px;
+      }
+   }
+
+   &__icon {
+      padding: 8px;
+      svg {
+         width: 24px;
+         height: 24px;
+         fill: none;
+
+         path {
+            fill: $dark-pink;
+         }
+      }
+      cursor: pointer;
+   }
+
+   /* Mobile*/
+   @media (max-width: 599px) {
+      &__box {
+         column-gap: 8px;
+      }
+   }
+}
+.counter {
+   &__minus {
+   }
+
+   &__num {
+   }
+
+   &__plus {
+   }
+}
+
+.basket-card--descr {
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      display: none;
+   }
+}
+
+.basket-card--mob {
+   display: none;
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      display: flex;
+      align-items: end;
+   }
+   padding: 16px;
+
+   .basket-card__box {
+      display: flex;
+      align-items: center;
+   }
+
+   .basket-card__row {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .basket-card__title {
+      margin-bottom: 8px;
+   }
+
+   .basket-card__price {
+      margin-bottom: 12px;
+   }
+}

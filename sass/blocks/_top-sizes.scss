@@ -1,0 +1,71 @@
+.top-sizes {
+   display: flex;
+   flex-direction: column;
+   row-gap: 24px;
+
+   /* Mobile*/
+   @media (max-width: 599px) {
+      padding-left: 16px;
+      row-gap: 16px;
+   }
+   &__box {
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+   }
+
+   &__title {
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+   }
+
+   &__row {
+      display: flex;
+      column-gap: 16px;
+
+      /* Tablet Small*/
+      @media (max-width: 899px) {
+         column-gap: unset;
+         justify-content: space-between;
+      }
+
+      /* Mobile*/
+      @media (max-width: 599px) {
+         overflow: hidden;
+      }
+
+      .swiper-slide {
+         width: unset;
+      }
+   }
+
+   &__btn {
+      padding: 0 15px;
+      height: 28px;
+      display: inline-flex;
+
+      span {
+         font-size: 14px;
+         line-height: 1.5;
+      }
+
+      &.active {
+         background-color: $accent-color;
+         span {
+            color: $white-color;
+         }
+         svg {
+            path {
+               fill: $white-color;
+            }
+         }
+      }
+   }
+
+   &__count {
+   }
+}
+.btn-border {
+}
+.active {
+}

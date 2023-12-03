@@ -1,0 +1,37 @@
+.popup-2-adress {
+   &__content {
+   }
+
+   &__form {
+      margin-bottom: 32px;
+   }
+
+   &__row {
+      display: flex;
+      column-gap: 24px;
+   }
+
+   &__list {
+      display: inline-flex;
+      flex-direction: column;
+      row-gap: 16px;
+      min-width: 181px;
+   }
+
+   &__item {
+      width: 100%;
+      padding: 4px 16px;
+
+      font-weight: 500;
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+      @include transition;
+      cursor: pointer;
+
+      &:hover,
+      &:focus,
+      &:active {
+         background-color: #ffdce7;
+      }
+   }
+}

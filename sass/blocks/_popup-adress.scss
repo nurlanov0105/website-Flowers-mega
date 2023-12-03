@@ -1,0 +1,52 @@
+.popup-adress {
+   &.active {
+      left: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 1;
+      z-index: 8;
+      transition: opacity 0.2s ease-out;
+   }
+   &__form {
+      margin-bottom: 32px;
+   }
+
+   &__row {
+      display: flex;
+      justify-content: space-between;
+
+      /* Tablet Small*/
+      @media (max-width: 539px) {
+         & > *:nth-child(3) {
+            display: none;
+         }
+      }
+      /* Tablet Small*/
+      @media (max-width: 349px) {
+         & > *:nth-child(2) {
+            display: none;
+         }
+      }
+   }
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+   }
+
+   &__item {
+      padding: 4px 6px 4px 0;
+      font-weight: 500;
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+
+      @include transition;
+
+      &:hover,
+      &:focus,
+      &:active {
+         color: $dark-pink;
+      }
+   }
+}

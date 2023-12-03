@@ -1,0 +1,260 @@
+.header-nav {
+   margin-top: 24px;
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      display: none;
+   }
+}
+.nav {
+   display: flex;
+   align-items: center;
+   column-gap: 48px;
+   padding: 23px 24px;
+   background-color: $white-color;
+   position: relative;
+   z-index: 4;
+
+   &__list {
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+   }
+
+   &__form {
+   }
+
+   &__profile {
+      display: flex;
+      align-items: center;
+      column-gap: 24px;
+   }
+
+   &__round {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 6px;
+      border: 1px solid $accent-color;
+      background-color: $white-color;
+
+      position: relative;
+
+      & > * {
+         flex-shrink: 0;
+      }
+
+      svg {
+         width: 24px;
+         height: 24px;
+         fill: none;
+         @include transition;
+
+         path {
+            fill: $accent-color;
+            @include transition;
+         }
+      }
+
+      @include transition;
+
+      &:hover,
+      &:focus,
+      &:active {
+         background-color: $accent-color;
+
+         svg {
+            fill: none;
+            @include transition;
+
+            path {
+               fill: $white-color;
+               @include transition;
+            }
+         }
+      }
+
+      &-count {
+         position: absolute;
+         top: -40%;
+         left: -40%;
+         transform: translate(50%, 50%);
+
+         display: flex;
+         width: 18px;
+         height: 18px;
+         padding: 0px 3px;
+         justify-content: center;
+         align-items: center;
+
+         background-color: $green-color;
+         border-radius: 50%;
+         font-size: 10px;
+         color: $white-color;
+      }
+
+      &.active {
+         background-color: $accent-color;
+
+         svg {
+            fill: none;
+            @include transition;
+
+            path {
+               fill: $white-color;
+               @include transition;
+            }
+         }
+      }
+   }
+
+   &__round--like {
+      svg {
+         width: 20px;
+         height: 20px;
+         fill: none;
+
+         path {
+            fill: white;
+            stroke: $accent-color;
+         }
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+         svg {
+            path {
+               fill: $white-color;
+            }
+         }
+      }
+
+      &.active {
+         svg {
+            path {
+               fill: $white-color;
+            }
+         }
+      }
+   }
+
+   &__round--basket {
+   }
+
+   &__round--profile {
+   }
+}
+
+.nav-geo {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   column-gap: 10px;
+   flex-shrink: 0;
+
+   height: 40px;
+   padding: 0px 12px;
+
+   & > * {
+      flex-shrink: 0;
+   }
+
+   &__svg {
+      width: 24px;
+      height: 24px;
+      fill: none;
+      path {
+         fill: $green-color;
+      }
+   }
+
+   span {
+      color: $accent-color;
+   }
+}
+.search {
+   display: flex;
+   align-items: center;
+   max-width: 639px;
+   width: 100%;
+   position: relative;
+
+   &__box {
+      position: relative;
+      width: 100%;
+      margin-right: -1px;
+   }
+
+   &__input-btn {
+      position: absolute;
+      top: 50%;
+      left: 12px;
+      transform: translateY(-50%);
+
+      svg {
+         width: 24px;
+         height: 24px;
+         fill: $dark-gray;
+         @include transition;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+         svg {
+            fill: $black-color;
+         }
+      }
+   }
+
+   &__input {
+      width: 100%;
+      height: 40px;
+      padding: 0 13px 0 52px;
+      border-radius: 6px 0px 0px 6px;
+
+      background-color: $white-color;
+
+      border-top: 2px solid $accent-color;
+      border-bottom: 2px solid $accent-color;
+      border-left: 2px solid $accent-color;
+
+      &::placeholder {
+         color: $dark-gray;
+
+         font-size: 14px;
+         line-height: 1.2;
+      }
+   }
+}
+
+.btn--search {
+   padding: 0 26px;
+   border-radius: 0px 6px 6px 0px;
+
+   &:hover,
+   &:focus {
+      background-color: $dark-pink;
+      border: 1px solid $dark-pink;
+   }
+
+   &:active {
+      background-color: $accent-color;
+      border: 1px solid $accent-color;
+
+      span {
+         color: $white-color;
+      }
+   }
+}
+
+.btn-border--drop {
+   z-index: 3;
+}
+
+.nav__btn {
+}

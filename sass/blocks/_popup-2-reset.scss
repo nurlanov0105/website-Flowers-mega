@@ -1,0 +1,21 @@
+.popup-2-reset {
+   .popup-2__title {
+      margin-bottom: 16px;
+   }
+   &__subtitle {
+      margin-bottom: 32px;
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+      color: $dark-gray;
+   }
+
+   .popup-2-login__box {
+      margin-bottom: 32px;
+   }
+
+   .popup-2-login__row {
+      .btn {
+         margin-left: auto;
+      }
+   }
+}

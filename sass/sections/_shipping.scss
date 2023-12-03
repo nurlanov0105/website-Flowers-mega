@@ -1,0 +1,61 @@
+.shipping {
+   &__title {
+      margin-bottom: 32px;
+      /* Tablet Small*/
+      @media (max-width: 899px) {
+         margin-bottom: 28px;
+      }
+      /* Mobile*/
+      @media (max-width: 599px) {
+         margin-bottom: 24px;
+      }
+   }
+
+   &__box {
+      &:not(:last-child) {
+         margin-bottom: 32px;
+      }
+   }
+
+   &__subtitle {
+      margin-bottom: 24px;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.3;
+      letter-spacing: 0.1px;
+   }
+
+   &__descr {
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+      p + p {
+         margin-top: 20px;
+         /* Mobile*/
+         @media (max-width: 599px) {
+            margin-top: 24px;
+         }
+      }
+   }
+
+   &__box-title {
+      margin-bottom: 16px;
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+   }
+
+   &__list {
+      list-style-type: disc;
+      list-style-position: inside;
+      margin-bottom: 32px;
+   }
+
+   &__item {
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+   }
+}
+
+.text-underline {
+   border-bottom: 1px solid $black-color;
+}

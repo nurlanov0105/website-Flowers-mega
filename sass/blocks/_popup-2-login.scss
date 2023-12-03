@@ -1,0 +1,142 @@
+.popup-2-login {
+   .popup-2__content {
+      padding: 32px;
+      width: 476px;
+   }
+
+   .popup-2__title {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+   }
+   &__cross {
+   }
+
+   &__form {
+   }
+
+   &__box {
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+      margin-bottom: 24px;
+   }
+
+   &__row-1 {
+      margin-bottom: 32px;
+      padding: 8px 0;
+   }
+
+   &__row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   &__checkbox {
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+   }
+
+   &__text {
+   }
+
+   &__btn-f {
+      cursor: pointer;
+   }
+
+   &__btn {
+   }
+
+   .form-group {
+      row-gap: 4px;
+      &__title {
+         font-size: 12px;
+         font-weight: 400;
+         line-height: 1.2;
+         color: $dark-gray;
+      }
+
+      &__input {
+      }
+
+      &__icon {
+      }
+
+      &__icon-eye {
+      }
+
+      &__icon-close-eye {
+      }
+   }
+
+   .form-group__password {
+      .form-group__box {
+         position: relative;
+
+         & > input {
+            width: 100%;
+         }
+      }
+
+      .form-group__icon {
+         position: absolute;
+         width: 38px;
+
+         display: flex;
+         align-items: center;
+         justify-content: center;
+
+         top: 0;
+         right: 0;
+         bottom: 0;
+
+         cursor: pointer;
+         svg {
+            width: 20px;
+            height: 20px;
+            fill: none;
+
+            path {
+               stroke: $dark-gray;
+            }
+         }
+      }
+
+      .form-group__icon-eye {
+         display: none;
+
+         &.active {
+            display: inline-block;
+         }
+      }
+
+      .form-group__icon-close-eye {
+         display: none;
+
+         &.active {
+            display: inline-block;
+         }
+      }
+   }
+}
+
+.active {
+}
+.checkbox {
+   &__real {
+   }
+
+   &__custom {
+   }
+}
+.accent-color {
+}
+.dark-pink {
+}
+.btn-border {
+}
+.btn {
+}

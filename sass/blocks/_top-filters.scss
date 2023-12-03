@@ -1,0 +1,109 @@
+.top-filters {
+   display: flex;
+   align-items: center;
+   column-gap: 20px;
+
+   padding: 8px;
+   background-color: $white-color;
+   border-radius: 6px;
+
+   &__sort {
+      position: relative;
+   }
+
+   &__list {
+      display: none !important;
+      top: calc(100% + 8px) !important;
+
+      &.active {
+         display: block !important;
+      }
+   }
+
+   .btn-border--sort {
+      &:hover,
+      &:focus {
+         &::after {
+            background: url("../img/icons/filter/sort-w.svg") center / cover no-repeat;
+         }
+      }
+
+      &::after {
+         background: url("../img/icons/filter/sort.svg") center / cover no-repeat;
+      }
+
+      /* Mobile Small */
+      @media (max-width: 389px) {
+         width: 100%;
+      }
+   }
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      padding: 0;
+      background-color: transparent;
+      border-radius: unset;
+      column-gap: 56px;
+   }
+
+   .btn-icon--filter {
+      padding-right: 78px;
+
+      &::before {
+         content: "";
+         position: absolute;
+         top: 50%;
+         right: 50px;
+         transform: translateY(-50%);
+
+         width: 20px;
+         height: 20px;
+         background: url("../img/icons/filter/filter.svg") center / cover no-repeat;
+         @include transition;
+      }
+
+      &::after {
+         content: "11";
+         right: 16px;
+         background-image: unset;
+
+         width: 20px;
+         height: 20px;
+
+         display: inline-flex;
+         justify-content: center;
+         align-items: center;
+
+         border-radius: 50%;
+         background-color: $green-color;
+
+         font-size: 14px;
+         line-height: 1.42;
+         letter-spacing: 0.2px;
+         color: $white-color;
+      }
+
+      &:hover,
+      &:focus {
+         &::before {
+            background: url("../img/icons/filter/filter-w.svg") center / cover no-repeat;
+         }
+      }
+   }
+
+   /* Mobile*/
+   @media (max-width: 599px) {
+      column-gap: 20px;
+      justify-content: space-between;
+   }
+
+   /* Mobile Small */
+   @media (max-width: 389px) {
+      flex-direction: column;
+      row-gap: 20px;
+
+      & > * {
+         width: 100%;
+      }
+   }
+}

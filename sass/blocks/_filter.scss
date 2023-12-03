@@ -1,0 +1,96 @@
+.filter {
+   &__inner {
+      padding: 24px 16px;
+      background-color: $white-color;
+      border-radius: 8px;
+   }
+
+   &__heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 32px;
+
+      & > * {
+         flex-shrink: 0;
+      }
+   }
+
+   &__title {
+      font-size: 32px;
+      font-weight: 600;
+   }
+
+   &__reset {
+   }
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 25px;
+   }
+
+   &__item {
+      position: relative;
+
+      &.active {
+         .filter__sublist {
+            display: flex;
+         }
+
+         .filter__item-arrow {
+            transform: rotate(360deg);
+         }
+      }
+   }
+
+   &__item-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+   }
+
+   &__item-row {
+      display: flex;
+      align-items: center;
+      column-gap: 16px;
+   }
+
+   &__item-title {
+      font-size: 20px;
+      color: #111;
+   }
+
+   &__item-arrow {
+      transform: rotate(180deg);
+      @include transition;
+      svg {
+         width: 25px;
+         height: 25px;
+         fill: none;
+
+         path {
+            fill: $green-color;
+         }
+      }
+   }
+
+   &__sublist {
+      display: none;
+
+      flex-direction: column;
+      row-gap: 12px;
+      padding-top: 16px;
+   }
+
+   &__subitem {
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+      cursor: pointer;
+   }
+
+   &__subitem-name {
+   }
+}

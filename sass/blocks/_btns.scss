@@ -1,0 +1,391 @@
+.btn {
+   display: flex;
+   height: 40px;
+   padding: 0px 16px;
+   justify-content: center;
+   align-items: center;
+   flex-shrink: 0;
+
+   border-radius: 6px;
+   background-color: $accent-color;
+   border: 1px solid $accent-color;
+
+   span {
+      color: $white-color;
+      line-height: 1.5;
+
+      @include transition;
+   }
+
+   @include transition;
+
+   &:hover,
+   &:focus {
+      background-color: $dark-pink;
+      border: 1px solid $dark-pink;
+   }
+
+   &:active {
+      background-color: #fff;
+      border: 1px solid $accent-color;
+
+      span {
+         color: $accent-color;
+      }
+   }
+}
+
+.btn-border {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   column-gap: 8px;
+   height: 40px;
+   padding: 0 16px;
+   flex-shrink: 0;
+
+   & > * {
+      flex-shrink: 0;
+   }
+
+   border-radius: 6px;
+   border: 1px solid $accent-color;
+   background-color: $white-color;
+
+   @include transition;
+
+   span {
+      color: $accent-color;
+      line-height: 1.5;
+      @include transition;
+   }
+
+   svg {
+      width: 20px;
+      height: 20px;
+      fill: none;
+      path {
+         fill: $accent-color;
+         @include transition;
+      }
+   }
+
+   &:hover,
+   &:focus {
+      background-color: $accent-color;
+      span {
+         color: $white-color;
+      }
+      svg {
+         path {
+            fill: $white-color;
+         }
+      }
+   }
+
+   &:active {
+      background-color: $dark-pink;
+      border: 1px solid $dark-pink;
+   }
+}
+
+.btn-icon {
+   height: 40px;
+   padding: 0 44px 0 16px;
+
+   border-radius: 6px;
+   border: 1px solid $accent-color;
+   background-color: $white-color;
+
+   color: $accent-color;
+   line-height: 1.5;
+   position: relative;
+   flex-shrink: 0;
+   overflow: hidden;
+
+   &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 16px;
+      transform: translateY(-50%);
+
+      width: 20px;
+      height: 20px;
+      background: url("../img/icons/nav/burger.svg") center / cover no-repeat;
+   }
+
+   /* Tablet Small*/
+   @media (max-width: 599px) {
+      height: 30px;
+
+      font-size: 14px;
+      line-height: 1.42;
+      letter-spacing: 0.2px;
+   }
+
+   @include transition;
+
+   &:hover,
+   &:focus {
+      background-color: $accent-color;
+      color: $white-color;
+
+      &::after {
+         background: url("../img/icons/nav/burger-w.svg") center / cover no-repeat;
+      }
+   }
+
+   &:active {
+      background-color: $dark-pink;
+      border: 1px solid $dark-pink;
+   }
+}
+
+.btn-order {
+   display: flex;
+   height: 40px;
+   padding: 0 16px;
+
+   align-items: center;
+   justify-content: center;
+
+   border-radius: 6px;
+   background-color: $accent-color;
+
+   @include transition;
+
+   &__do {
+      display: none;
+      align-items: center;
+      column-gap: 8px;
+
+      & > * {
+         flex-shrink: 0;
+      }
+
+      svg {
+         width: 20px;
+         height: 20px;
+         fill: $white-color;
+      }
+
+      span {
+         line-height: 1.5;
+         color: $white-color;
+
+         /* Tablet Small*/
+         @media (max-width: 899px) {
+            font-size: 14px;
+         }
+      }
+
+      &.active {
+         display: flex;
+      }
+   }
+
+   &__done {
+      display: none;
+
+      align-items: center;
+      column-gap: 8px;
+
+      & > * {
+         flex-shrink: 0;
+      }
+
+      svg {
+         width: 20px;
+         height: 20px;
+         fill: $white-color;
+      }
+
+      span {
+         line-height: 1.5;
+         color: $white-color;
+         /* Tablet Small*/
+         @media (max-width: 899px) {
+            font-size: 14px;
+         }
+      }
+
+      &.active {
+         display: flex;
+      }
+   }
+
+   &:hover,
+   &:focus {
+      background-color: $dark-pink;
+   }
+
+   &.active {
+      background-color: $green-color;
+   }
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      height: 32px;
+   }
+}
+
+.btn--icon {
+   column-gap: 8px;
+   svg {
+      width: 20px;
+      height: 20px;
+      fill: none;
+
+      path {
+         fill: $white-color;
+      }
+   }
+}
+
+.btn-add {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   height: 40px;
+   padding: 0 16px;
+   height: 40px;
+
+   border-radius: 6px;
+   background-color: $accent-color;
+   border: 1px solid $accent-color;
+
+   color: $white-color;
+   line-height: 1.5;
+
+   position: relative;
+
+   @include transition;
+
+   &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: calc(50% - 52px);
+      transform: translate(-50%, -50%);
+
+      width: 20px;
+      height: 20px;
+      background: url("../img/additional-card/plus.svg") center / cover no-repeat;
+      @include transition;
+   }
+
+   &:hover,
+   &:focus {
+      color: $white-color;
+      &::before {
+         background: url("../img/additional-card/plus.svg") center / cover no-repeat;
+      }
+
+      background-color: $dark-pink;
+      border: 1px solid $dark-pink;
+   }
+
+   &:active {
+      color: $accent-color;
+      background-color: $white-color;
+
+      &::before {
+         background: url("../img/additional-card/plus-w.svg") center / cover no-repeat;
+      }
+   }
+}
+
+.btn-del {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 40px;
+   padding: 0 16px;
+
+   background-color: $red-color;
+   border-radius: 6px;
+
+   span {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: $white-color;
+   }
+}
+
+.btn-out {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 40px;
+   padding: 0 16px;
+   flex-shrink: 0;
+
+   border-radius: 6px;
+   background-color: $dark-gray;
+   @include transition;
+
+   span {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: $white-color;
+      @include transition;
+   }
+
+   &:hover,
+   &:focus {
+      background-color: $black-color;
+   }
+
+   &:active {
+      background-color: #000;
+   }
+}
+
+.btn-cl-order {
+   width: 40px;
+   height: 40px;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-shrink: 0;
+
+   border-radius: 6px;
+   border: 1px solid $accent-color;
+   background-color: $white-color;
+   overflow: hidden;
+   @include transition;
+   & > * {
+      flex-shrink: 0;
+   }
+
+   &__svg {
+      svg {
+         width: 20px;
+         height: 20px;
+         fill: none;
+
+         path {
+            fill: $accent-color;
+            @include transition;
+         }
+      }
+   }
+
+   &:hover,
+   &:focus,
+   &:active {
+      background-color: $accent-color;
+      .btn-cl-order__svg {
+         svg {
+            path {
+               fill: $white-color;
+            }
+         }
+      }
+   }
+}

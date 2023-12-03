@@ -1,0 +1,342 @@
+.ordering {
+   &__title {
+      margin-bottom: 24px;
+   }
+
+   &__row {
+      display: flex;
+      align-items: start;
+      column-gap: 64px;
+
+      /* Tablet Big */
+      @media (max-width: 1231px) {
+         column-gap: 32px;
+      }
+
+      /* Tablet Small*/
+      @media (max-width: 899px) {
+         flex-direction: column-reverse;
+         row-gap: 48px;
+      }
+   }
+
+   &__form {
+      max-width: 747px;
+      width: 100%;
+
+      /* Tablet Small*/
+      @media (max-width: 899px) {
+         max-width: 100%;
+      }
+   }
+
+   &__box {
+      max-width: 389px;
+      width: 100%;
+
+      /* Tablet Small*/
+      @media (max-width: 899px) {
+         max-width: 100%;
+      }
+   }
+
+   /* Mobile*/
+   @media (max-width: 599px) {
+      .container {
+         width: 100%;
+         padding: 0;
+      }
+
+      .ordering__title {
+         padding: 0 16px;
+      }
+   }
+}
+
+.ordering-form {
+   padding: 16px;
+   border-radius: 8px;
+   background-color: $white-color;
+   &__content {
+   }
+
+   &__field {
+      margin-bottom: 16px;
+
+      &:last-child {
+         margin-bottom: 32px;
+      }
+   }
+
+   &__title {
+      margin-bottom: 16px;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.3;
+      letter-spacing: 0.1px;
+   }
+
+   &__row {
+      display: flex;
+      align-items: center;
+      column-gap: 16px;
+
+      /* Tablet Small*/
+      @media (max-width: 899px) {
+         flex-direction: column;
+         align-items: start;
+         row-gap: 16px;
+
+         & > * {
+            width: 100%;
+         }
+      }
+   }
+
+   .form-group {
+      position: relative;
+      row-gap: 4px;
+      &__title {
+         font-size: 12px;
+         font-weight: 400;
+         line-height: 1.2;
+         color: $dark-gray;
+
+         &--mb {
+            display: inline-block;
+            margin-bottom: 4px;
+         }
+      }
+
+      &__input {
+         border-radius: 4px;
+         border: 1px solid $accent-color;
+         background-color: $white-color;
+
+         line-height: 20px; /* 125% */
+         letter-spacing: 0.2px;
+      }
+
+      label.error {
+         position: absolute;
+         top: 20px;
+         right: 5px;
+         color: $red-color;
+      }
+   }
+
+   .form-group--another {
+      label.error {
+         top: 2px;
+      }
+   }
+
+   .form-group-mb {
+      margin-bottom: 16px;
+   }
+   &__checkbox {
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+      padding-right: 30px;
+   }
+
+   &__checkbox-text {
+      font-size: 14px;
+      font-weight: 400;
+   }
+
+   &__remind {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+      color: $dark-gray;
+   }
+   .input-form-date {
+      width: 349px;
+
+      /* Tablet Small*/
+      @media (max-width: 899px) {
+         width: 100%;
+      }
+   }
+
+   &__box {
+      margin-bottom: 8px;
+
+      /* Tablet Small*/
+      @media (max-width: 899px) {
+         margin-bottom: 4px;
+      }
+   }
+
+   &__input-time {
+      position: relative;
+      width: 100%;
+
+      label.error {
+         position: absolute;
+         top: 2px;
+         right: 5px;
+         color: $red-color;
+      }
+   }
+
+   .input-time-1 {
+      &::before {
+         content: "с";
+         position: absolute;
+         top: 50%;
+         left: 8px;
+         transform: translateY(-50%);
+
+         font-size: 16px;
+         font-weight: 400;
+         line-height: 1.25;
+         letter-spacing: 0.2px;
+         z-index: 2;
+      }
+   }
+   .input-time-2 {
+      &::before {
+         content: "до";
+         position: absolute;
+         top: 50%;
+         left: 8px;
+         transform: translateY(-50%);
+
+         font-size: 16px;
+         font-weight: 400;
+         line-height: 1.25;
+         letter-spacing: 0.2px;
+         z-index: 2;
+      }
+   }
+
+   &__btn {
+      width: 349px;
+      height: 55px;
+      margin-left: auto;
+      margin-right: auto;
+
+      span {
+         font-size: 20px;
+         font-weight: 400;
+         line-height: 1.5;
+      }
+
+      /* Tablet Small*/
+      @media (max-width: 899px) {
+         width: 100%;
+      }
+   }
+
+   /* Mobile*/
+   @media (max-width: 599px) {
+      padding: 16px 16px 32px 16px;
+      .ordering-form__row-time {
+         row-gap: 32px;
+      }
+
+      .ordering-form__btn {
+         height: 40px;
+      }
+   }
+}
+
+.checkbox {
+   &__real {
+   }
+
+   &__custom {
+   }
+}
+.validate-error {
+}
+.form-input {
+   display: flex;
+   align-items: center;
+   position: relative;
+   &__btn {
+      /* Tablet Small*/
+      @media (max-width: 899px) {
+         display: none !important;
+      }
+   }
+
+   &__input {
+      width: 100%;
+      height: 40px;
+      padding: 0 12px;
+      border-radius: 0px 6px 6px 0px;
+
+      border: 1px solid $accent-color;
+      background-color: $white-color;
+
+      &::placeholder {
+         font-size: 16px;
+         font-weight: 400;
+         line-height: 1.25;
+         letter-spacing: 0.2px;
+         color: $dark-gray;
+      }
+
+      /* Tablet Small*/
+      @media (max-width: 899px) {
+         border-radius: 6px;
+      }
+   }
+   label.error {
+      position: absolute;
+      top: 2px;
+      right: 5px;
+      color: $red-color;
+      z-index: 4;
+   }
+}
+.btn-form {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   flex-shrink: 0;
+
+   column-gap: 8px;
+   height: 40px;
+   padding: 0 16px;
+
+   border-radius: 6px 0px 0px 6px;
+   background-color: $accent-color;
+
+   &__icon {
+      svg {
+         width: 20px;
+         height: 20px;
+         fill: none;
+
+         path {
+            fill: $white-color;
+         }
+      }
+   }
+
+   &__title {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: $white-color;
+   }
+}
+
+.input-form-date {
+   height: 40px;
+
+   padding: 0 8px 0;
+   border-radius: 4px;
+   border: 1px solid $accent-color;
+   background-color: $white-color;
+}
+
+.mb0 {
+   margin-bottom: 0;
+}

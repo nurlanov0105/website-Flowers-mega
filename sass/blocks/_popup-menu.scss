@@ -1,0 +1,124 @@
+.popup-menu {
+   &.active {
+      left: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 1;
+      z-index: 6;
+      transition: opacity 0.2s ease-out;
+   }
+
+   .popup__content {
+      padding: 16px 0 52px;
+   }
+
+   &__heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-right: 44px;
+      padding-bottom: 16px;
+      margin-bottom: 20px;
+      padding-right: 16px;
+      padding-left: 16px;
+   }
+
+   &__geo {
+      margin-bottom: 16px;
+      padding-right: 16px;
+      padding-left: 16px;
+
+      .nav-geo {
+         justify-content: start;
+         padding: 0;
+         height: unset;
+      }
+      span {
+         font-size: 20px;
+         letter-spacing: 0.1px;
+      }
+   }
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+      padding: 24px 16px;
+      margin-bottom: 16px;
+
+      border-top: 1px solid $green-color;
+      border-bottom: 1px solid $green-color;
+   }
+
+   &__item {
+      font-size: 20px;
+      letter-spacing: 0.1px;
+      cursor: pointer;
+      @include transition;
+   }
+
+   &__item--catalog {
+      &:hover,
+      &:focus,
+      &:active {
+         color: $accent-color;
+      }
+   }
+
+   &__link {
+   }
+
+   &__box {
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+      padding: 0 12px;
+      margin-bottom: 64px;
+   }
+   &__link {
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+      border-radius: 6px;
+      @include transition;
+
+      &:hover,
+      &:focus,
+      &:active {
+         .nav__round {
+            background-color: $accent-color;
+
+            svg {
+               fill: none;
+               @include transition;
+
+               path {
+                  stroke: $white-color;
+                  fill: none;
+
+                  @include transition;
+               }
+            }
+         }
+         color: $accent-color;
+      }
+   }
+
+   .popup-menu__link-name {
+      font-size: 20px;
+      letter-spacing: 0.1px;
+      color: $accent-color;
+      @include transition;
+   }
+
+   &__btns {
+      display: flex;
+      flex-direction: column;
+      row-gap: 32px;
+      padding: 0 16px;
+   }
+
+   &__btn {
+      width: 100%;
+   }
+}

@@ -1,0 +1,36 @@
+.products {
+   padding-bottom: 48px;
+   &__title {
+      margin-bottom: 24px;
+   }
+
+   &__row {
+      margin-bottom: 32px;
+   }
+
+   &--hits {
+      padding-bottom: 80px;
+   }
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      padding-bottom: 42px;
+      &__row {
+         margin-bottom: 28px;
+      }
+   }
+
+   /* Mobile*/
+   @media (max-width: 599px) {
+      padding-bottom: 32px;
+      &__row {
+         margin-bottom: 24px;
+      }
+   }
+}
+
+.products__btn {
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+}

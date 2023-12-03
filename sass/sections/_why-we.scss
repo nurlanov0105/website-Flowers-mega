@@ -1,0 +1,120 @@
+.why-we {
+   padding-bottom: 120px;
+   &__title {
+      margin-bottom: 48px;
+      text-align: center;
+   }
+
+   &__row {
+      display: flex;
+      column-gap: 35px;
+
+      /* Tablet Big */
+      @media (max-width: 1231px) {
+         flex-wrap: wrap;
+         row-gap: 40px;
+         justify-content: center;
+      }
+   }
+
+   &__card {
+      width: 274px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 6px;
+      background-color: $accent-color;
+   }
+
+   &__img {
+      padding: 8px;
+      margin-bottom: 16px;
+
+      img {
+         width: 48px;
+         height: 48px;
+      }
+   }
+
+   &__card-title {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+      color: $white-color;
+      text-align: center;
+   }
+
+   &__btn {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 48px;
+   }
+
+   &__descr {
+      margin-top: 32px;
+
+      text-align: justify;
+      font-size: 20px;
+      line-height: 1.3;
+      letter-spacing: 0.1px;
+
+      p + p {
+         margin-top: 20px;
+      }
+   }
+
+   /* Tablet Big */
+   @media (max-width: 1231px) {
+      padding-bottom: 80px;
+   }
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      &__title {
+         margin-bottom: 36px;
+      }
+
+      &__row {
+         row-gap: 26px;
+      }
+
+      &__btn {
+         margin-top: 32px;
+      }
+
+      &__descr {
+         margin-top: 26px;
+      }
+   }
+
+   /* Mobile*/
+   @media (max-width: 599px) {
+      padding-bottom: 76px;
+
+      &__title {
+         margin-bottom: 24px;
+         text-align: left;
+      }
+
+      &__row {
+         row-gap: 16px;
+      }
+
+      &__card {
+         width: 100%;
+      }
+
+      &__card-title {
+         max-width: 226px;
+      }
+
+      &__descr {
+         margin-top: 16px;
+         font-size: 16px;
+         line-height: 1.25;
+         letter-spacing: 0.2px;
+      }
+   }
+}

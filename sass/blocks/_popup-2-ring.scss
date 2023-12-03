@@ -1,0 +1,153 @@
+.popup-2-ring {
+   .popup-2__content {
+      padding: 32px;
+   }
+   .popup-2__title {
+      margin-bottom: 24px;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+   }
+   &__subtitle {
+      margin-bottom: 32px;
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+      color: $dark-gray;
+   }
+
+   &__form {
+   }
+
+   &__logo-m {
+      display: none;
+      /* Tablet Small*/
+      @media (max-width: 899px) {
+         display: block;
+      }
+   }
+   &__cross {
+      /* Tablet Small*/
+      @media (max-width: 899px) {
+         display: none !important;
+      }
+   }
+
+   &__arrow {
+      display: none;
+      position: absolute;
+      top: 16px;
+      left: 16px;
+
+      flex-shrink: 0;
+      padding: 6px;
+
+      svg {
+         width: 28px;
+         height: 28px;
+         fill: none;
+
+         path {
+            fill: $dark-pink;
+         }
+      }
+
+      cursor: pointer;
+      /* Tablet Small*/
+      @media (max-width: 899px) {
+         display: inline-block;
+      }
+   }
+
+   &__label {
+      display: flex;
+      flex-direction: column;
+      row-gap: 4px;
+      margin-bottom: 16px;
+      position: relative;
+
+      &:nth-child(2) {
+         margin-bottom: 32px;
+      }
+   }
+
+   &__input-title {
+      font-size: 12px;
+      line-height: 1.2;
+      color: $dark-gray;
+   }
+
+   &__input {
+      // max-width: 358px;
+   }
+
+   &__checkbox {
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+      margin-bottom: 32px;
+      position: relative;
+
+      .validate-error {
+         top: -8px;
+      }
+   }
+
+   &__check-text {
+      color: #111;
+
+      .br {
+         display: none;
+
+         /* Mobile*/
+         @media (max-width: 599px) {
+            display: block;
+         }
+      }
+   }
+
+   &__btn {
+      margin-left: auto;
+   }
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      &.active {
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         transform: unset;
+         height: 100%;
+         width: 100%;
+      }
+
+      .popup-2__content {
+         padding: 16px;
+         width: 100%;
+         height: 100%;
+      }
+
+      &__logo-m {
+         margin-bottom: 118px;
+         & > .logo {
+            margin-left: auto;
+            margin-right: auto;
+         }
+      }
+
+      .popup-2__title {
+         margin-bottom: 16px;
+      }
+   }
+
+   /* Mobile Small */
+   @media (max-width: 319px) {
+      &__logo-m {
+         & > .logo {
+            margin-left: auto;
+            margin-right: unset;
+         }
+      }
+   }
+}

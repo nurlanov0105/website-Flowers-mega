@@ -1,0 +1,48 @@
+.popup-search {
+   &.active {
+      left: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 1;
+      z-index: 7;
+      transition: opacity 0.2s ease-out;
+   }
+
+   &__form {
+      margin-bottom: 24px;
+   }
+   &__list {
+      display: none;
+      flex-direction: column;
+      row-gap: 16px;
+
+      &.active {
+         display: flex;
+      }
+   }
+
+   &__item {
+      font-size: 20px;
+      letter-spacing: 0.1px;
+   }
+
+   &__cont {
+      display: block;
+   }
+
+   &__category {
+      font-weight: 600;
+   }
+
+   &__results {
+      font-weight: 600;
+      color: $dark-pink;
+   }
+}
+.mob-search {
+   &__input {
+   }
+
+   &__btn {
+   }
+}
